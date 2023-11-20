@@ -5,71 +5,57 @@ package koevasilev.exercise;
 
 public class Cycles {
 
-    private int[] mass = {2,4,6,8,10,12,14,16};
-    private int count = 1;
+    private final int[] mass = {2, 4, 6, 8, 10, 12, 14, 16};
+
     // for
-    public void Forcycle(){
+    public void forCycle() {
         System.out.println("For cycle");
         for (int i = 0; i < mass.length; i++) {
 
-            if (count == 2){
-                System.out.println(mass[i-1]*mass[i]);
-                count = 1;
-                return;
-            } else {
-                count++;
+            if (i % 2 != 0) {
+                System.out.println(mass[i - 1] * mass[i]);
             }
         }
     }
 
     //while
-    public void whilecycle(){
+    public void whileCycle() {
         System.out.println("while cycle");
-        count =1;
         int j = 0;
-        while (j < mass.length){
-            if (count == 2){
-                System.out.println(mass[j-1]*mass[j]);
-                count = 1;
-            } else {
-                count++;
+        while (j < mass.length) {
+            if (j % 2 != 0) {
+                System.out.println(mass[j - 1] * mass[j]);
             }
             j++;
         }
     }
 
     //do..while
-    public void dowhile()
-    {
+    public void doWhile() {
         System.out.println("do..while cycle");
-        count =1;
         int k = 0;
         do {
-            if (count == 2){
-                System.out.println(mass[k-1]*mass[k]);
-                count = 1;
-            } else {
-                count++;
+            if (k % 2 != 0) {
+                System.out.println(mass[k - 1] * mass[k]);
             }
             k++;
         } while (k < mass.length);
     }
 
     //for each
-    public void foreach()
-    {
+    public void foreach() {
         System.out.println("for each cycle");
-        count =1;
+        int count = 1;
         int j = 0;
-        for (int var: mass){
-            switch (count){
+        for (int var : mass) {
+            switch (count) {
                 case (1):
                     j = var;
                     count++;
                     break;
                 case (2):
-                    System.out.println(j*var);
-                    count=1;
+                    System.out.println(j * var);
+                    count = 1;
                     break;
             }
 

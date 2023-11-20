@@ -10,28 +10,29 @@ public class Main {
         System.out.println("Hello and welcome!");
 
         Cycles cyc = new Cycles();
-        cyc.Forcycle();
-        cyc.whilecycle();
-        cyc.dowhile();
+        cyc.forCycle();
+        cyc.whileCycle();
+        cyc.doWhile();
         cyc.foreach();
         Function equ = new Function();
-        equ.DoFunc(2,20,2.2);
+        equ.doFunc(2, 20, 2);
 
         TwoDimensionalArr twoDimensionalArr = new TwoDimensionalArr();
         twoDimensionalArr.Do();
 
- //       MathClass math = new MathClass();
-   //     math.SolveEquation();
+        MathClass math = new MathClass();
+        math.SolveEquation();
         System.out.println("Notepad start!");
         Notepad notepad = new Notepad();
-        notepad.AddNote("Hello note");
-        notepad.ShowNotes();
-        notepad.AddNote("note 1");
-        notepad.AddNote("note 2");
-        notepad.AddNote("note 3");
-        notepad.AddNote("note 4");
-        notepad.EditNote(2,"Edited");
-        notepad.ShowNotes();
+        notepad.addNote("Hello note");
+        notepad.addNote("note 1");
+        notepad.addNote("note 2");
+        notepad.addNote("note 3");
+        notepad.addNote("note 4");
+        notepad.showNotes();
+        System.out.println("Notepad with Edit:");
+        notepad.editNote(2, "Edited");
+        notepad.showNotes();
 
 
     }

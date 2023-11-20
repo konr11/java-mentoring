@@ -1,27 +1,35 @@
 package koevasilev.notebook;
 
+/**
+ * Класс Заметки
+ * @autor Константин Васильев
+ * @version 1.0
+ */
 public class Note {
-    public Note() {
+    /**
+     * Конструктор - создание нового объекта Заметка
+     */
+    public Note(String text, int id) {
+        this.note = text;
+        this.Id = id;
     }
-    private static String notes[] = new String[0];
-    public void AddNote(String text){
-        int i = notes.length;
-        String NewNote[] = new String[i + 1];
-        for (int k=0 ;k < i;k++){
-            NewNote[k] = notes[k];
-        }
-        NewNote[i] = text;
-        notes = NewNote;
+    /** Поле заметка */
+    private String note;
+    /** Поле Id заметки */
+    private int Id = 0;
+
+    @Override
+    public String toString() {
+        return "Note: " + note + " Id: " + Id;
     }
-    public void EditNote(int id, String note){
-        String NewNote[] = notes;
-        NewNote[id] = note;
-        notes = NewNote;
+
+    /** Запись в поле заметка */
+    public void setNote(String note) {
+        this.note = note;
     }
-    public void ShowNotes(){
-        System.out.println("Note list:");
-        for (String val : notes){
-            System.out.println(val);
-        }
+    /** Получение значения поля Id */
+    public int getId() {
+        return Id;
     }
+
 }
