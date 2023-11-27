@@ -6,14 +6,15 @@ public class Function {
 
     public void doFunc(double a, double b, double h) {
 
-        if (h < 1)
+        if (h < 1) {
             System.out.println("Шаг должен быть больше 0");
-
-        System.out.println("| Аргумент | x |");
-        while (a <= b) {
-            double x = Math.tan(a * 2) - 3;
-            System.out.println("| " + a + " | " + x + " |");
-            a += h;
+        } else {
+            System.out.println("| Аргумент | x |");
+            while (a <= b) {
+                double x = Math.tan(a * 2) - 3;
+                System.out.println("| " + a + " | " + x + " |");
+                a += h;
+            }
         }
     }
 }

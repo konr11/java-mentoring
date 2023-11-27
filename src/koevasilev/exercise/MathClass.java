@@ -7,10 +7,9 @@ public class MathClass {
     Scanner in = new Scanner(System.in);
 
     public void SolveEquation() {
-        double a, b, c;
-        a = in.nextDouble();
-        b = in.nextDouble();
-        c = in.nextDouble();
+        double a = in.nextDouble();
+        double b = in.nextDouble();
+        double c = in.nextDouble();
 
         double D = b * b - 4 * a * c;
         if (D > 0) {

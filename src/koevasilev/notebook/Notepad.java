@@ -1,22 +1,26 @@
 package koevasilev.notebook;
 
+/**
+ * Класс Блокнот
+ *
+ * @author Константин Васильев
+ * @version 1.0
+ */
 public class Notepad {
-    //Спроектировать и разработать классы Запись в блокноте и Блокнот (записи блокнота хранятся в массиве).
-    // Реализовать методы: Добавить запись, Редактировать запись, Посмотреть все записи. Написать для данного кода javadoc-документацию
+
     /**
-     * Класс Блокнот
-     * @autor Константин Васильев
-     * @version 1.0
+     * Переменная для генерации Id
      */
-    public Notepad() {
-    }
-    /** Переменная для генерации Id*/
     private int IdCount = 1;
-    /** Массив с объектами заметок */
+    /**
+     * Массив с объектами заметок
+     */
     private Note[] NoteArr = new Note[0];
 
     /**
      * Функция создания заметки
+     *
+     * @param text текст заметки
      */
     public void addNote(String text) {
         Note[] NewArr = new Note[IdCount];
@@ -29,8 +33,12 @@ public class Notepad {
         NoteArr = NewArr;
         IdCount++;
     }
+
     /**
      * Функция редактирования заметки
+     *
+     * @param note измененный текст заметки
+     * @param id   Id редактируемой заметки
      */
     public void editNote(int id, String note) {
         for (Note row : NoteArr) {
@@ -38,6 +46,7 @@ public class Notepad {
                 row.setNote(note);
         }
     }
+
     /**
      * Функция выводит в консоль все заметки и их Id
      */
